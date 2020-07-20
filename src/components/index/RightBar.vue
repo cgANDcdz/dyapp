@@ -10,8 +10,8 @@
             <span class="iconfont icon-aixin"></span>
             <p>18.0w</p>
         </div>
-        <div class="item-icon">
-            <span class="iconfont icon-pinglun"></span>
+        <div class="item-icon">                  <!-- stop阻止事件向上冒泡 -->
+            <span class="iconfont icon-pinglun" @click.stop="showCom($event)"></span>
             <p>1.4w</p>
         </div>
         <div class="item-icon">
@@ -29,7 +29,17 @@
 
 <script>
 export default {
-    
+    data(){
+        return{
+
+        }
+    },
+    methods:{
+        showCom(e){
+            e.preventDefault();
+            this.$emit("changeCom");  //组件间通信,向父组件中的监听器通知这个事件
+        }
+    }
 }
 </script>
 

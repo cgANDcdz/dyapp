@@ -34,6 +34,21 @@ const router=new Router({
                     component:()=>import("./views/follow/Follow.vue")
                 }
             ]
+        },
+        {
+            path:'/sign',
+            name:"sign",
+            component:()=> import("./views/Sign.vue")
+        },
+        {
+            path:'/tplogin',
+            name:"tplogin",
+            component:()=> import("./views/TelPswdLogin.vue")
+        },
+        {
+            path:'/checkCode',
+            name:"checkCode",
+            component:()=> import("./views/CheckCode.vue")
         }
     ]
 })
