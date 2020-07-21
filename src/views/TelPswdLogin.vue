@@ -71,11 +71,20 @@ export default {
         loginAction(){
             var regtel=/^1[345789]{1}\d{9}$/ ;  //验证手机号
             if(this.phone==""){
-                console.log("手机号不能为空!");
+                //用自定义组件弹出提示内容
+                this.$toast("手机号不能为空!");
             }else if(!regtel.test(this.phone)){
-                console.log("请填写正确的手机号");
+                this.$toast({
+                    message:"请填写正确的手机号码",
+                    type:"error",
+                    duration:2000
+                });
             }else if(this.password==""){
-                console.log("密码不能为空");
+                this.$toast({
+                    message:"密码不能为空!",
+                    type:"error",
+                    duration:2000
+                });
             }else{
                 this.disabled=false;
                 this.btnBg=true;

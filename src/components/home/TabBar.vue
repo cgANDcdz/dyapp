@@ -7,7 +7,7 @@
             <router-link to="/follow" tag="span" :class="tabIndex==1?'active':''">熟人</router-link>
         </div>
         <div class="item" @click="changeTab(2)">
-            <router-link to="/index" tag="span" :class="tabIndex==2?'active':''">
+            <router-link to="/publish" tag="span" :class="tabIndex==2?'active':''">
                 <img class="dy-btn" src="../../static/img/dy-btn.png" >
             </router-link>
         </div>

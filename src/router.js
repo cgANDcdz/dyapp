@@ -32,7 +32,18 @@ const router=new Router({
                     path:'/follow',
                     name:'follow',
                     component:()=>import("./views/follow/Follow.vue")
-                }
+                },
+                {
+                    path:'/me',
+                    name:'me',
+                    component:()=>import("./views/me/Me.vue")
+                },
+                {
+                    path:'/msg',
+                    name:'msg',
+                    component:()=>import("./views/msg/Msg.vue")
+                },
+                
             ]
         },
         {
@@ -49,6 +60,16 @@ const router=new Router({
             path:'/checkCode',
             name:"checkCode",
             component:()=> import("./views/CheckCode.vue")
+        },
+        {
+            path:'/edit',
+            name:"tedit",
+            component:()=> import("./views/me/Edit.vue")
+        },
+        {
+            path:'/publish',
+            name:"publish",
+            component:()=> import("./views/publish/Publish.vue")
         }
     ]
 })
